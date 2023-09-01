@@ -1,0 +1,6 @@
+/data/players
+/data/plugin_data
+/data/worlds
+/data/server.log
+/data/*.txt
+.env
