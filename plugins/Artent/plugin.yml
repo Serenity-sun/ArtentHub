@@ -1,0 +1,5 @@
+name: Artent
+main: Artent\Main
+src-namespace-prefix: Artent
+version: 1.0.0
+api: 5.0.0
