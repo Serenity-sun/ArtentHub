@@ -75,14 +75,3 @@ RUN chmod o+x /usr/bin/php
 USER pocketmine
 
 ENV TERM=xterm
-
-# Открываем порты
-EXPOSE 19132/tcp
-EXPOSE 19132/udp
-
-# Создаем вольюмы
-VOLUME ["/data", "/plugins"]
-
-# Запускаем pocketmine
-CMD ["cd", "/pocketmine"]
-CMD ["php", "PocketMine-MP.phar", "--no-wizard", "--disable-ansi", "--disable-readline", "--enable-ansi", "--enable-readline", "--data=/data", "--plugins=/plugins"]

@@ -13,8 +13,8 @@ services:
     ports:
       - "3306:3306"
   hub:
-    image: artent.fun/hub:latest
-    container_name: hub
+    image: ${IMAGE_NAME}
+    container_name: ${CONTAINER_NAME}
     ports:
       - "19133:19132/udp"
       - "19133:19132/tcp"
@@ -27,6 +27,12 @@ services:
     build:
         context: .
         dockerfile: build/Dockerfile
+    command:
+      - /bin/sh
+      - -c
+      - |
+        cd /pocketmine && \
+        php PocketMine-MP.phar --no-wizard --disable-ansi --disable-readline --enable-ansi --enable-readline --data=/data --plugins=/plugins
     networks:
       - servers
 networks:
