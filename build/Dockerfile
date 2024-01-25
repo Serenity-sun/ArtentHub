@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 # Тег pocketmine
-ARG PMMP_TAG="5.5.0-BETA1"
+ARG PMMP_TAG="5.10.0"
 
 # Флаги компиляции php https://github.com/pmmp/PHP-Binaries/tree/php-8.2-latest
 ARG COMPILE_SH_ARGS="-f -g"
@@ -46,7 +46,6 @@ RUN php $(test -d vendor/pocketmine/bedrock-data && echo -n vendor/pocketmine/be
 # Создаем phar
 RUN php -dphar.readonly=0 build/server-phar.php --git $(git rev-parse HEAD)
 
-# Just to make sure DevTools didn't false-positive-exit
 RUN test -f /build/PocketMine-MP.phar
 
 FROM ubuntu:latest
