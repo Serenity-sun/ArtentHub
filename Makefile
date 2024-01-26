@@ -21,6 +21,11 @@ start:
 	docker-compose up -d
 	docker logs -f $(CONTAINER_NAME)
 
-# Останавливает контейнер
-stop:
-	docker-compose down
+show-log:
+	docker logs -f $(CONTAINER_NAME)
+
+restart-container:
+	docker restart $(CONTAINER_NAME)
+
+stop-container:
+	docker stop $(CONTAINER_NAME)
