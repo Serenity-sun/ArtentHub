@@ -2,5 +2,8 @@
 /data/plugin_data
 /data/worlds
 /data/server.log
+/data/server.lock
 /data/*.txt
 .env
+/.idea/*
+/plugins/*.phar

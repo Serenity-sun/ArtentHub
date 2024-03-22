@@ -1,4 +1,4 @@
-# Main configuration file for PocketMine-MP
+# PluginLoader configuration file for PocketMine-MP
 # These settings are the ones that cannot be included in server.properties
 # Some of these settings are safe, others can break your server if modified incorrectly
 # New settings/defaults won't appear automatically in this file when upgrading.
@@ -27,11 +27,11 @@ memory:
   #This will trigger low-memory-triggers and fire an event to free memory when the usage goes over this
   global-limit: 0
 
-  #Main thread soft memory limit in megabytes. Set to 0 to disable
+  #PluginLoader thread soft memory limit in megabytes. Set to 0 to disable
   #This will trigger low-memory-triggers and fire an event to free memory when the usage goes over this
   main-limit: 0
 
-  #Main thread hard memory limit in megabytes. Set to 0 to disable
+  #PluginLoader thread hard memory limit in megabytes. Set to 0 to disable
   #This will stop the server when the limit is surpassed
   main-hard-limit: 1024
 
@@ -60,7 +60,7 @@ memory:
     #Trigger on low memory
     low-memory-trigger: true
 
-  #Settings controlling memory dump handling.
+  #Config controlling memory dump handling.
   memory-dump:
     #Dump memory from async workers as well as the main thread. If you have issues with segfaults when dumping memory, disable this setting.
     dump-async-worker: true
@@ -82,9 +82,9 @@ memory:
 network:
   #Threshold for batching packets, in bytes. Only these packets will be compressed
   #Set to 0 to compress everything, -1 to disable.
-  batch-threshold: 256
+  batch-threshold: -1
   #Compression level used when sending batched packets. Higher = more CPU, less bandwidth usage
-  compression-level: 6
+  compression-level: 3
   #Use AsyncTasks for compression. Adds half/one tick delay, less CPU load on main thread
   async-compression: false
   #Experimental. Use UPnP to automatically port forward
@@ -94,18 +94,18 @@ network:
   max-mtu-size: 1492
   #Enable encryption of Minecraft network traffic. This has an impact on performance, but prevents hackers from stealing sessions and pretending to be other players.
   #DO NOT DISABLE THIS unless you understand the risks involved.
-  enable-encryption: true
+  enable-encryption: false
 
 debug:
   #If > 1, it will show debug messages in the console
-  level: 1
+  level: 3
 
 player:
   #Choose whether to enable player data saving.
   save-player-data: true
   #If true, checks that joining players' Xbox user ID (XUID) match what was previously recorded.
   #This also prevents non-XBL players using XBL players' usernames to steal their data on servers with xbox-auth=off.
-  verify-xuid: true
+  verify-xuid: false
 
 level-settings:
   #The default format that worlds will use when created

@@ -1,5 +1,5 @@
 name: Artent
-main: Artent\Main
+main: Artent\PluginLoader
 src-namespace-prefix: Artent
 version: 1.0.0
 api: 5.0.0

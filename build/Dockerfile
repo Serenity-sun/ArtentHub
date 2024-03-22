@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 # Тег pocketmine
-ARG PMMP_TAG="5.10.0"
+ARG PMMP_TAG="5.13.0"
 
 # Флаги компиляции php https://github.com/pmmp/PHP-Binaries/tree/php-8.2-latest
 ARG COMPILE_SH_ARGS="-f -g"

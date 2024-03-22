@@ -1,0 +1,11 @@
+bedwars:
+  transferPortal:
+    maxX: 277
+    minX: 255
+    maxY: 74
+    minY: 71
+    maxZ: 262
+    minZ: 262
+  transferAddress:
+    ip: "127.0.0.1"
+    port: 12001
